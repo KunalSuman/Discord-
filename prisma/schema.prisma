@@ -14,5 +14,29 @@ datasource db {
 }
 
 model user{
-    
+    userid String @default(uuid()) @id
+    name String
+    email String @unique
+    password String
+    passwordhash String
+    room room[]
+    message message[]
+}
+
+model room{
+    roomid String @default(uuid()) @id
+    name String
+    ownerid String
+    owner user @relation(fields: [ownerid], references: [userid])
+    message message[]
+}
+
+model message{
+    messageid String @default(uuid()) @id
+    roomid String
+    senderid String
+    content String
+    timestamp DateTime @default(now())
+    room room @relation(fields: [roomid], references: [roomid])
+    sender user @relation(fields: [senderid], references: [userid])
 }

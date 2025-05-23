@@ -12,6 +12,7 @@
     "@livekit/components-react": "^2.9.0",
     "@livekit/components-styles": "^1.1.5",
     "@prisma/client": "^6.5.0",
+    "axios": "^1.8.4",
     "livekit-server-sdk": "^2.10.2",
     "next": "15.2.2",
     "next-auth": "^4.24.11",
