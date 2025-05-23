@@ -45,7 +45,7 @@ export default function Home() {
                     if(e.key === 'Enter'){
                         socket.emit('message',inputValue);
                     }
-                }}></input>
+                }} ></input>
             </div>
     </div>
     </div>
